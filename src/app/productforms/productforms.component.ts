@@ -7,6 +7,7 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./productforms.component.css']
 })
 export class ProductformsComponent implements OnInit {
+  public name01;
   checkform(ticketform){
     console.log(ticketform);
 
