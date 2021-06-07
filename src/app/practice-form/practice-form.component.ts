@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./practice-form.component.css']
 })
 export class PracticeFormComponent implements OnInit {
+  public name001;
 public routerArrary=[
   {id:"1",arrayInfo:"home",content:"Home"},
   {id:"2",arrayInfo:"courses",content:"Courses"},
