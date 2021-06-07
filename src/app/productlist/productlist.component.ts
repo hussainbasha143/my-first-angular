@@ -9,7 +9,7 @@ export class ProductlistComponent implements OnInit {
 result:any=[];
 public errorMsg:string="Loading...";
   constructor(private product:ProductService) { }
-
+public name;
   ngOnInit(): void {
     this.product.getProducts().subscribe((data=>{
       this.result=data;
