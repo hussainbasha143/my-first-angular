@@ -27,7 +27,8 @@
               "src/styles.css",
               "node_modules/font-awesome/css/font-awesome.min.css"
             ],
-            "scripts": []
+            "scripts": [
+             ]
           },
           "configurations": {
             "production": {
