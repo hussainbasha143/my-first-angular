@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-footer-angular.component.css']
 })
 export class MyFooterAngularComponent implements OnInit {
-
+public footer;
   constructor() { }
 
   ngOnInit(): void {
