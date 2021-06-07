@@ -1,0 +1,42 @@
+header {
+  padding: 10px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #1abc9c;
+  color: white;
+  text-align: center;
+}
+main {
+  padding: 10px;
+
+  background: #1c1d1d;
+  color: white;
+  font-size: 20px;
+}
+ul li {
+  display: inline-block !important;
+  margin: 1em;
+}
+li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+li a:hover {
+  background-color: aliceblue;
+  color: black;
+}
+.nav-tabs {
+  border: none;
+}
+#secondmenu {
+  margin-left: 770pt;
+  margin-top: -67pt;
+}

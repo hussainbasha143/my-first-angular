@@ -1,0 +1,78 @@
+<div>
+    <ul>
+        <li><a href='#'>home</a></li>
+        <li><a href='#'>about</a></li>
+        <li><a href='#'>contact</a></li>
+        <li><a href='#'>info</a></li>
+    </ul>
+</div>
+<div *ngIf="showval">
+    <p>check ngif</p>
+</div>
+<button (click)="buttonfun()">checkngif</button> <br>
+<input type="checkbox" [(ngModel)]="abc"> &nbsp;&nbsp; Agree termns and conditions &nbsp;&nbsp;  
+<button type="button" class="btn btn-secondary" [disabled]="!abc">installation</button>
+<!--{{abc}}-->
+<input type="text" [(ngModel)]="checkval">
+<!--<div *ngIf="checkval">
+    <p *ngIf="checkval%2 ==0">even number</p>
+    <p *ngIf="checkval%2 !==0">odd number</p>
+</div> -->
+<div *ngIf="checkval">
+    <p *ngIf="checkval%2 ==0 then pqr;else mno">even number</p>
+   <ng-template #pqr>even number</ng-template>
+   <ng-template #mno>odd number</ng-template>
+</div>
+<table class="table">
+    <tr *ngFor="let names of programing;let i=index;let e=even" [class]="e?'bg-success':''">
+        <td>{{i}}</td>
+        <td>{{names}} </td>
+        <td> {{e}}</td>
+        </tr>
+</table>
+<!--metod1-->
+<!--<input type="text" [(ngModel)]="month">-->
+<!--metod2-->
+<input type="text" #t (keyup)='0'>
+<!--<div [ngSwitch]='month'>-->
+    <div [ngSwitch]='t.value'>
+<ng-template ngSwitchCase='1'>January</ng-template>
+<ng-template ngSwitchCase='2'>February</ng-template>
+<ng-template ngSwitchDefault>Default</ng-template>
+</div>
+<div [ngStyle]="{backgroundColor:getColor()}">
+    {{shopId}}-{{shopStatus}}
+</div>
+<div>
+    <img [src]="car" (click)="changewid($event)">
+</div>
+<div>checkval : {{price}}</div>
+<input type="text" [value]="price" #pp (change)="checkvaluesUpdate(pp.value)">
+
+<input type="text" #png (keyup)="0">
+<div [ngSwitch]="png.value">
+<span *ngIf="png.value==25 then tv1 else tv2"></span>
+<ng-template #tv1>equal to 25</ng-template>
+<ng-template #tv2>not equal </ng-template>
+</div>
+
+<button  (click)="getText(tv1,tv2)">getText</button>
+
+<div>
+    <input type="radio" name="person" value="rdo1" [(ngModel)]="getradio">Seller
+    <input type="radio" name="person" value="rdo2" [(ngModel)]="getradio">Buyller
+  <br>
+  <!--one way-->
+    <!--<span *ngIf="getradio=='rdo1'">Seller</span>
+    <span *ngIf="getradio=='rdo2'">Buyller</span>-->
+
+    <!--second way-->
+    <div *ngIf="getradio">
+    <span *ngIf="getradio=='rdo1' then rdo1;else rdo2"></span>
+    <ng-template #rdo1>Seller Form</ng-template>
+    <ng-template #rdo2>Buyller Form</ng-template>
+</div>
+</div>
+
+
+

@@ -1,0 +1,23 @@
+<form class="form-group" #ticketform="ngForm">
+Name:<input type="text" class="form-group" name="cn" #cn="ngModel" [ngModel] required>
+Age:<input type="text" class="form-group" name="age" #age="ngModel" [ngModel]>
+Gender:<input type="radio" class="form-group" name="male" #male="ngModel" [ngModel]> Male
+        <input type="radio" class="form-group" name="female" #female="ngModel" [ngModel]>Female <br>
+        Email ID:<input type="text" class="form-group" name="email" #email="ngModel" [ngModel] required>
+        Phone:<input type="text" class="form-group" name="phone" #phone="ngModel" [ngModel] required minlength="3">
+       
+       <div *ngIf="phone.errors && phone.touched">
+           <span *ngIf="phone.errors.required">phone number must</span>
+           <span *ngIf="phone.errors.minlength">phone number 3 digits</span>
+       </div>
+        <button type="button" (click)="checkform(ticketform.value)" class="btn btn-primary" [disabled]="!ticketform.valid">Proceed to pay</button>
+        <button type="button" class="btn btn-danger" (click)="ticketform.resetForm()">Reset</button>
+</form>
+<button (click)="checkform(phone)">checkform</button>
+<form [formGroup]="registrationFrom">
+UserName:<input type="text" formControlName="uname">
+Password:<input type="text" formControlName="pwd">
+ConfirmPwd:<input type="text" formControlName="cinformpwd">
+</form>
+{{registrationFrom.value | json}}
+

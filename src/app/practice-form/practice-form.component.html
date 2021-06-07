@@ -1,0 +1,31 @@
+<div>
+    <header>
+        <h1>Practicing the Header</h1>
+  
+    </header>
+   
+    <main>
+<div>
+    <ul  class="nav nav-tabs">     
+        <li *ngFor="let x of routerArrary" class="nav-item">
+            <a (click)="getIds(x)" routerLink="{{x.arrayInfo}}" class="nav-link" routerLinkActive="active">{{x.content}}</a>
+        </li>&nbsp;&nbsp;&nbsp;
+    </ul>
+   </div>
+   <div>
+    <ul id="secondmenu" class="nav nav-tabs">     
+        <li class="nav-item"><a routerLink="signin" class="nav-link" routerLinkActive="active">SignIn</a></li>&nbsp;&nbsp;&nbsp;
+<li class="nav-item"><a routerLink="signup" class="nav-link" routerLinkActive="active">SignUp</a></li>&nbsp;&nbsp;&nbsp;
+
+    </ul>
+</div>
+
+    </main>
+    <section>
+        <router-outlet></router-outlet>
+    </section>
+    <footer>
+        <h5><span>@tech</span>&nbsp;&nbsp;Practicing the Footer</h5>
+
+    </footer>
+</div>

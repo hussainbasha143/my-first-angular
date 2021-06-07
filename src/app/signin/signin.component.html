@@ -1,0 +1,14 @@
+<div class="signin">
+    <h2>Signin Form</h2>
+    <form #signin="ngForm" (ngSubmit)="getSignIn(signin.value)">
+        <div>
+            <input type="text" name="uname" #uname="ngModel" [ngModel] placeholder="enter username" required><br><br>
+            <input type="text" name="pwd" #pwd="ngModel" [ngModel] placeholder="enter password" required><br><br>
+        </div>
+        <div>
+            <button [disabled]=!signin.valid>Log In</button>
+        </div>
+      
+    </form>
+    <button (click)="getcheck(signin)"></button>
+</div>

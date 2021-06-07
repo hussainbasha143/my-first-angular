@@ -1,0 +1,17 @@
+<p>productlist works!</p>
+
+<!--<div *ngIf ="result.length >0 ;else #norecords">-->
+    <div class="alert alert-danger" role="alert">{{errorMsg}}</div>
+
+<table class="table">
+    <tr *ngFor="let data of result">
+<td>{{data.id}}</td>
+<td>{{data.company}}</td>
+<td>{{data.price}}</td>
+<td>{{data.Model}}</td>
+    </tr>
+</table>
+<!--</div>-->
+<ng-template #norecords>
+    <div class="alert alert-danger" role="alert">{{errorMsg}}</div>
+</ng-template>

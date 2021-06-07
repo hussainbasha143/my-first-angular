@@ -1,0 +1,21 @@
+
+<div class="form" >
+    <h2>Signup Form</h2>
+    <form  #getform="ngForm" (ngSubmit)="storeSignupval(getform.value)">
+        <div>
+            <input type="text" name="uname"  #uname="ngModel" [ngModel] placeholder="Username" required><br><br>
+            <input type="text" name="pwd" #pwd="ngModel" [ngModel] placeholder="Password" required><br><br>
+            <input type="text" name="dob" #dob="ngModel" [ngModel] placeholder="Date of birth" ><br><br>
+            <input type="text" name="phone" #phone="ngModel" [ngModel] placeholder="Phone number"><br><br>
+            <input type="radio" value="male" name="gender" #male="ngModel" [ngModel]>&nbsp;&nbsp;Male<br>
+            <input type="radio" value="female" name="gender" #female="ngModel" [ngModel]>&nbsp;&nbsp;Female<br>
+
+        
+        </div>
+        <div>
+            <button [disabled]=!getform.valid>submit</button>
+        </div>
+       
+    </form>
+    <div>{{msg}}</div>
+</div>

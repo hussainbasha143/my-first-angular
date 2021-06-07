@@ -1,0 +1,17 @@
+<div class="form-group" [formGroup]="restaurantform">
+    DishName:<input type="text" formControlName="DishName" class="form-control">
+<div *ngIf="restaurantform.controls['DishName'].errors && restaurantform.controls['DishName'].touched">
+<span *ngIf="restaurantform.controls['DishName'].errors.required">
+    DishName Must be enter
+</span>
+<span *ngIf="restaurantform.controls['DishName'].errors.minlength">
+    DishName Must be enter atleast two letters
+</span>
+</div>
+    DishPrice:<input type="text" formControlName="DishPrice" class="form-control">
+    Ingredients:<input type="text" formControlName="Ingredients" class="form-control">
+
+    <button type="button" class="btn btn-success" [disabled]=!restaurantform.valid>Save</button>
+    <button type="button" class="btn btn-success" (click)="restaurantform.reset()">Reset</button>
+</div>
+<button type="button" (click)="checkconsole()">checkconsole</button>
