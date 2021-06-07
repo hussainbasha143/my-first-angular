@@ -8,6 +8,7 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 })
 export class HomeComponentComponent implements OnInit {
   public getId;
+  public home;
   
   constructor(private _routes:ActivatedRoute,private route:Router) { }
 
